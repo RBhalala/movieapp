@@ -1,4 +1,4 @@
-# 🎬 Movie Rating API
+# 🎬 Movies API
 
 This project is a Spring Boot REST API that allows users to:
 
