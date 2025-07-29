@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "a702bf5f-8d5b-48c6-9c82-cb7b159202f5",
+		"name": "backbase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29408850"
+	},
+	"item": [
+		{
+			"name": "Get best picture",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-TOKEN",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/movies/{{title}}/best-picture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"{{title}}",
+						"best-picture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get top-rated movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/movies/top-rated",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"top-rated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/movies/{{title}}/rate?rating=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"{{title}}",
+						"rate"
+					],
+					"query": [
+						{
+							"key": "rating",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-TOKEN",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/movies/{{title}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"{{title}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
